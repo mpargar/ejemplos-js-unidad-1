@@ -26,16 +26,17 @@ const carrito = {
 /*console.log(carrito.productos)*/
 
 // TODO: Retomar Object Create
-/*const PrototipoCarrito = {*/
-  /*agregar: function (producto){*/
-    /*if(this.productos) {*/
-      /*this.productos = [producto]*/
-    /*} else {*/
-      /*this.productos.push(producto)*/
-    /*}*/
-  /*}*/
-/*}*/
+const PrototipoCarrito = {
+  agregar: function (producto){
+    if(!this.productos) {
+      this.productos = [producto]
+    } else {
+      this.productos.push(producto)
+    }
+  }
+}
 
-/*const proto = Object.create(PrototipoCarrito)*/
-/*proto.agregar('HOLA!')*/
-/*console.log(proto)*/
+const proto = Object.create(PrototipoCarrito)
+console.log(proto.productos)
+proto.agregar('Computadora')
+console.log(proto.productos)
